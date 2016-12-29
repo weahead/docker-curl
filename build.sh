@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t weahead/curl:1.0.0 .
+docker build -t weahead/curl:latest .

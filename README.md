@@ -1,8 +1,20 @@
 # We ahead's curl in a container
 
-[![latest 7.49.1](https://img.shields.io/badge/latest-7.49.1-green.svg)](https://github.com/weahead/docker-curl/releases/tag/v7.49.1)
-
 Simple Alpine container with curl.
+
+
+## Example usage
+
+```
+# Redirect output to file on local disk
+docker run --rm -it weahead/curl -sL https://example.com > output.html
+
+# Download to file on local disk
+docker run --rm -it -v $PWD:/data weahead/curl -sL https://example.com -o /data/output.html
+
+# Download to file on other volume
+docker run --rm -it -v destination-volume:/data weahead/curl -sL https://example.com -o /data/output.html
+```
 
 
 ## License
