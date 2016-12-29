@@ -7,13 +7,13 @@ Simple Alpine container with curl.
 
 ```
 # Redirect output to file on local disk
-docker run --rm -it weahead/curl -sL https://example.com > output.html
+docker run --rm weahead/curl -sL https://example.com > output.html
 
 # Download to file on local disk
-docker run --rm -it -v $PWD:/data weahead/curl -sL https://example.com -o /data/output.html
+docker run --rm -v $PWD:/data weahead/curl -sL https://example.com -o /data/output.html
 
 # Download to file on other volume
-docker run --rm -it -v destination-volume:/data weahead/curl -sL https://example.com -o /data/output.html
+docker run --rm -v destination-volume:/data weahead/curl -sL https://example.com -o /data/output.html
 ```
 
 
